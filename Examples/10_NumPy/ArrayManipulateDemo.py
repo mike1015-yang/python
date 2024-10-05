@@ -33,14 +33,24 @@ def main():
     print()
     # 走訪2維陣列
     print("走訪2維陣列np.nditer(a2): ", end="")
+    # 方法一: 單純迴圈
+    # for number in a2:
+    #     for i in number:
+    #         print(i, end=" ")
+    # 方法二: nditer
     for number in np.nditer(a2):
         print(number, end=" ")
     print()
     print("-----------------------------------")
     # 需要賦值才會改變原本的陣列
     print("1維陣列附加、新增、刪除(會產生新的陣列):")
+    # a1 = np.append(a1, 7)，a1才會改變
     print(f"np.append(a1, 7): {np.append(a1, 7)}")
+    # a1 = np.insert(a1, 0, 8)，a1才會改變
+    # insert(a1, 索引, 值)
     print(f"np.insert(a1, 0, 8): {np.insert(a1, 0, 8)}")
+    # a1 = np.delete(a1, 0)，a1才會改變
+    # delete(a1, 索引)
     print(f"np.delete(a1, 0): {np.delete(a1, 0)}")
 
     print("下面2種方式為取出陣列局部，仍會參照到原始陣列:")

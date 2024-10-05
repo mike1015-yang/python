@@ -25,7 +25,9 @@ def arraySortStatistic():
     print(f"a:\n{a}")
     print("-----------------------------------")
     # axis=0代表列, axis=1代表欄
+    # 沿著axis 0排序
     print(f"np.sort(a, axis=0):\n{np.sort(a, axis=0)}")
+    # 沿著axis 1排序
     print(f"np.sort(a, axis=1):\n{np.sort(a, axis=1)}")
     print("-----------------------------------")
     print(f"a:\n{a}")
